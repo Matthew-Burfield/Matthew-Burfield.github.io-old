@@ -12,19 +12,19 @@ In the tutorial, we created three CSS variables under the :root element of the C
 
 Creating the variables in CSS was relatively easy, they were created under the :root element like so:
 
-{% highlight CSS %}
+```css
 :root {
   --base: #ffc6BB;
   --spacing: 20px;
   --blur: 10px;
 }
-{% highlight %}
+```
 
 Obviously the three variables here are called base, spacing and blur. The -- before the variable name is what indicates a variable in vanilla CSS and the values specified here indicate the default values given to the variables.
 
 Variables are then used within the stylesheet like so:
 
-```CSS
+```css
 .className {
   color: var(--base);
   padding: var(--spacing);
@@ -34,9 +34,9 @@ Variables are then used within the stylesheet like so:
 
 Next up was then to update the variables in JavaScript. The main line used to do this was to update the documentElement.style like so:
 
-{% highlight javascript %}
+```javascript
 document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-{% end highlight %}
+```
 
 documentElement returns the Element that is the root element of the document. For example, the <html> element in this case.
 
@@ -44,7 +44,7 @@ When we defined the CSS variables under the :root, those elements were added to 
 
 This is the final JavaScript we used in the tutorial:
 
-```JavaScript
+```javascript
 const inputs = document.querySelectorAll('.controls input');
 
 function handleUpdate() {
