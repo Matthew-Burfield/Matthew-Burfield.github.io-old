@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Event Listeners and Transitions"
-date:   2016-12-15 20:02:16 +1000
+date:   2016-12-22 20:02:16 +1000
 categories: CSS3 JavaScript
 ---
 Working on the Simon Game, which is the last project I need to finish to complete the front end developer certificate of Free Code Camp.
