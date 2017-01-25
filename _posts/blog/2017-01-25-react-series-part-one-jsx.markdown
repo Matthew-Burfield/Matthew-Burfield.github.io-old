@@ -20,7 +20,7 @@ This is my first post in what will become a series, and figured I'd start with a
 
 At first glance, JSX could be mistaken for HTML inside of JavaScript code. That's what it looked like to me, and on the surface, it seems to behave similarly to a templating language.
 
-```jsx
+```javascript
 const element = <h1>Hello world!</h1>;
 ```
 
@@ -34,13 +34,13 @@ What is a React element? A React element is just a regular JavaScript object.
 
 For example:
 
-```jsx
+```javascript
 <div attribute="attributeValue" />
 ```
 
 Compiles to:
 
-```jsx
+```javascript
 React.createElement(
   div,
   { attribute: attributeValue },
@@ -64,7 +64,7 @@ There are a few more. The full list and descriptions of each can be found in the
 
 Other than that though, adding attributes seems to be relatively straight forward. For example, if we wanted to add a button with a class of "button" and an onclick attribute that calls a function called `handleOnClick()` and some button text that says "Click Me" we would simply write:
 
-```jsx
+```javascript
 <button 
   className="button" 
   onClick={this.handleOnClick()}
@@ -85,7 +85,7 @@ This isn't limited to just calling functions in onclick attributes, it's much mo
 
 Let's say we had an array of books with properties of title like so:
 
-```JavaScript
+```javascript
 const list = [
   {
     title: 'React',
@@ -102,7 +102,7 @@ const list = [
 
 Now lets say we're rendering our JSX component and we want to display each of the items in the list. Using JavaScript inside the curly braces, we can use the Array.prototype.map() function.
 
-```jsx
+```javascript
   <table>
     <tbody>
       {list.map(item =>
@@ -129,7 +129,7 @@ React doesn't want to re-render everything to the DOM everytime the state of the
 
 For example, converting between these two trees works poorly.
 
-```JavaScript
+```javascript
 <ul>
   <li>Duke</li>
   <li>Villanova</li>
@@ -147,7 +147,7 @@ React will mutate every child instead of realizing it can keep the `<li>Duke</li
 
 The key attribute solves this problem. For example, if we were to modify our above trees to have keys:
 
-```JavaScript
+```javascript
 <ul>
   <li key="2015">Duke</li>
   <li key="2016">Villanova</li>
