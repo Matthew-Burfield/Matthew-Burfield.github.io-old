@@ -5,7 +5,7 @@ locale: en_AU
 description: Matthew's professional development blog and portfolio.
 logo: site-logo.png
 search: true
-url: http://matthew-burfield.github.io
+url: https://matthew-burfield.github.io/
 
 # Jekyll configuration
 
