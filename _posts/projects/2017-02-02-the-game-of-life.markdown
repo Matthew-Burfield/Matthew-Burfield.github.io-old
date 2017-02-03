@@ -61,3 +61,4 @@ I think this means I'm getting much more comfortable using React, and designing 
 
 I also started using eslint with airbnb rules for this project, which gives me more confidence that I'm writing my code to a high standard.
 
+This was also the first time I'd used FlexBox for css styling. It's so much easier than I was expecting! I imagine I'll be using flexbox heaps in the future!
