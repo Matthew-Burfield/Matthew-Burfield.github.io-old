@@ -19,7 +19,7 @@ The Game of Life, also known simply as Life, is a cellular automaton devised by 
 
 The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced "players", by creating patterns with particular properties.
 
-For more information, including the games rules. Please check out the [wikipedia entry][https://en.wikipedia.org/wiki/Conway's_Game_of_Life]
+For more information, including the games rules. Please check out the [wikipedia entry](https://en.wikipedia.org/wiki/Conway's_Game_of_Life)
 
 # Project Requirements
 
