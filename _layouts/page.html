@@ -18,6 +18,18 @@
       <header class="entry-header">
         <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
       </header>
+      <div class="social-links">
+        {% if page.gitrepo %}
+          <div>
+            <a href="{{ page.gitrepo }}" title="View On GitHub" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i><p>View on GitHub</p></a>
+          </div>
+        {% endif %}
+        {% if page.codepen %}
+          <div>
+            <a href="{{ page.codepen }}" title="View On CodePen" target="_blank"><i class="fa fa-codepen fa-3x" aria-hidden="true"></i><p>View on CodePen</p></a>
+          </div>
+        {% endif %}
+      </div>
       <div class="entry-content">
         {{ content }}
       </div><!-- /.entry-content -->

@@ -9,7 +9,7 @@ image:
   feature: quote-generator.jpg
   thumb: quote-generator.jpg
 date:   2016-11-06 20:02:16
-url: https://codepen.io/Burfield/full/QGwgQM
+codepen: https://codepen.io/Burfield/pen/QGwgQM
 gitrepo: 
 ---
 

@@ -9,7 +9,7 @@ image:
   feature: local-weather-app.jpg
   thumb: local-weather-app.jpg
 date:   2016-11-08 20:02:16
-url: https://codepen.io/Burfield/full/LbVbdO
+codepen: https://codepen.io/Burfield/pen/LbVbdO
 gitrepo: 
 ---
 

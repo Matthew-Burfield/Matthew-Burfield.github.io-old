@@ -9,7 +9,7 @@ image:
   feature: tic-tac-toe.jpg
   thumb: tic-tac-toe.jpg
 date:   2016-11-27 20:02:16
-url: https://codepen.io/Burfield/full/VmpLZy
+codepen: https://codepen.io/Burfield/pen/VmpLZy
 gitrepo: https://github.com/Matthew-Burfield/TicTacToe
 ---
 

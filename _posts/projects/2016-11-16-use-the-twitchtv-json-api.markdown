@@ -9,7 +9,7 @@ image:
   feature: twtich-tv.jpg
   thumb: twitch-tv.jpg
 date:   2016-11-16 20:02:16
-url: https://codepen.io/Burfield/full/xRENLy
+codepen: https://codepen.io/Burfield/pen/xRENLy
 gitrepo: 
 ---
 

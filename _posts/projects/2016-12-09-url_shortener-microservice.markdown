@@ -9,7 +9,7 @@ image:
   feature: url-shortener.jpg
   thumb: url-shortener.jpg
 date:   2016-12-09 20:02:16
-url: https://burfield-short-url.herokuapp.com
+heroku: https://burfield-short-url.herokuapp.com
 gitrepo: https://github.com/Matthew-Burfield/url-shortener-microservice
 ---
 

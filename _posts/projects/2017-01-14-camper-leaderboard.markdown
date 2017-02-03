@@ -9,7 +9,7 @@ image:
   feature: camper-leaderboard.jpg
   thumb: camper-leaderboard.jpg
 date:   2017-01-14 20:02:16
-url: http://codepen.io/Burfield/full/PWzaed/
+codepen: http://codepen.io/Burfield/pen/PWzaed/
 gitrepo: https://github.com/Matthew-Burfield/camper-leaderboard
 ---
 

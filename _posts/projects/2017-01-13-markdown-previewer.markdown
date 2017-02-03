@@ -9,7 +9,7 @@ image:
   feature: markdown-previewer.jpg
   thumb: markdown-previewer.jpg
 date:   2017-01-13 20:02:16
-url: http://codepen.io/Burfield/full/MJeeLr/
+codepen: http://codepen.io/Burfield/pen/MJeeLr/
 gitrepo: https://github.com/Matthew-Burfield/Markdown-Previewer
 ---
 

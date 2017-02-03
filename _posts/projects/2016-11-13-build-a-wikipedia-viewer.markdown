@@ -9,7 +9,7 @@ image:
   feature: wikipedia-viewer.jpg
   thumb: wikipedia-viewer.jpg
 date:   2016-11-13 20:02:16
-url: https://codepen.io/Burfield/full/rWepJJ
+codepen: https://codepen.io/Burfield/pen/rWepJJ
 gitrepo: 
 ---
 

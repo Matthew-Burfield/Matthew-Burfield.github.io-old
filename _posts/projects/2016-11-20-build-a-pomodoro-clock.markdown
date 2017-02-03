@@ -9,7 +9,7 @@ image:
   feature: pomodoro-clock.jpg
   thumb: pomodoro-clock.jpg
 date:   2016-11-20 20:02:16
-url: https://codepen.io/Burfield/full/LbxgKM
+codepen: https://codepen.io/Burfield/pen/LbxgKM
 gitrepo: https://github.com/Matthew-Burfield/PomodoroClock
 ---
 

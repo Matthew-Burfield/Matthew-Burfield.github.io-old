@@ -9,7 +9,7 @@ image:
   feature: drumkit.jpg
   thumb: drumkit.jpg
 date:   2016-12-28 20:02:16
-url: 
+codepen: 
 gitrepo: https://github.com/Matthew-Burfield/javascript30-drumkit
 ---
 
