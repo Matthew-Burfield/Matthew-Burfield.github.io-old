@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What are React components?"
+title:  "React Series Part Two: What Are Components?"
 modified:
 categories: blog
 excerpt:
