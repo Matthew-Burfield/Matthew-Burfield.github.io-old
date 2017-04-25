@@ -27,7 +27,7 @@ We started off programming from within Cloud9, and awesome platform that gives y
 
 The only annoying thing was that when it came time to commit our changes, all of our edits would go through whomever created the Cloud9 environment. Not ideal as we both wanted to retain our individual changes.
 
-We then started using [https://screenhero.com/](Screenhero) which allowed us to screen share. This let us develop locally on our own machines which I found to be much better. We had a couple of issues with poor connections at times which caused the video to drop off, but overall it was a good experience.
+We then started using [Screenhero](https://screenhero.com/) which allowed us to screen share. This let us develop locally on our own machines which I found to be much better. We had a couple of issues with poor connections at times which caused the video to drop off, but overall it was a good experience.
 
 I think @chemok78 and I are both at a similar programming level, although I certainly learnt a lot from programming with him as we both have different styles of programming.
 
