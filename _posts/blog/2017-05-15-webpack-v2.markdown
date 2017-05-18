@@ -1,0 +1,201 @@
+---
+layout: post
+title:  "Webpack v2 - Beginners Guide and Reference"
+modified:
+categories: blog
+excerpt:
+tags: [JavaScript,Tools,Webpack,Babel]
+image:
+date:   2017-05-15 6:02:16
+---
+# Webpack v2
+
+The point of this post it to get you excited about WEBPACK!! You know, when I first saw a webpack configuration is was pretty scary. I had no idea what was going on! It looks like a javascript object (it is), but it looks so complicated at first, and I didn't even know exactly what webpack did in general, so I guess it's not so surprising that I thought the config file looked scary.
+
+However, I've just finished [Kent C Dodd's course](https://frontendmasters.com/courses/webpack/) called Webpack 2 Deep Dive and I've come to realise it's not really that complicated at all, and there are some frekkin awesome things that it can do for you. It's exciting! Hopefully I can pass on what I've learnt and get you excited about webpack too.
+
+So I'm hoping this post is going to be a good beginners guide to get you familiar with webpack, and also a good reference to be able to come back to later. I know I'm going to be deploying a project to production at some point soon and be thinking, "Okay! I'm ready to add tree shaking, code splitting, caching, and offline mode to my app - but what was the syntax again?". I want to be able to come back to this post and get the references to the relevant npm packages and pretty much copy+paste the configurations into my webpack.config file.
+
+# Let's Get This Party Started
+
+lol jks, we're still pre-drinking. Here's a quick list/reference to the major topics covered in this article. You can read from start to finish or just skip to the bits that interest you.
+
+debugging webpack
+bundling
+Transpiling with Babel
+Loading CSS/SASS/ and more
+Hot Module Replacement
+Tree Shaking
+Code Splitting and lazy loading
+Extracting CSS
+Commons Chunking
+Offline with service workers
+
+# Webpack: An Introduction
+
+omg, so I'm starting to realise how long this post is going to be if I try talk about everything. Just look at that list of topics! All of these things are awesome and worth talking about, and having the reference, so I might end up splitting this into a two post series.
+
+Aaaaaannnyyway, back to the webpack introduction. Here's webpack's one line elevator pitch:
+
+> Hi, I'm Webpack. I can merge all your JavaScript files into just one bundle before we send it to the browser.
+
+So you might be asking: "Ok cool, so we can convert all our files into one. Why should I care?"
+
+Good question! I'm glad you asked. The real power comes in how webpack handles your scripts *dependencies*, but before I go into that, let's recap on how you would manage dependencies if you were to just add all your JavaScript files as script tags directly in your HTML file.
+
+If you had multiple JS files, you **must** ensure the dependant JS is loaded in before the JS that depends on it. Let me show you an example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script src="/js/vendor/jquery.js" />
+    <script src="/js/custom.js" />
+  </body>
+</html>
+```
+
+Let's examine the HTML above. There is nothing in th body of the HTML document, other than two JavaScript files we are loading in. Now let's say that custom.js is our code that we have written, and all through our code we are using jQuery. That's fine, we can do that because we are also loading jQuery, but what happens if we were to flip those scripts around and load in the `/js/custom.js` script **before** `/js/vendor/jquery.js`. What would happen?
+
+If you guessed that it doesn't matter what the order is, and everything will still work as expected, you'd be **wrong**. You'd most likely get an error like:
+
+```error
+Uncaught ReferenceError: $ is not defined
+```
+
+The order is important! But what's worse, is that custom.js doesn't explicitly tell us what it's dependencies are, it just starts using functions that it's *hoping* are already defined and in scope. To actually understand what the dependencies are, we need to look at the code. This sucks.
+
+Maybe not so much for this example, but image your project looked like this:
+
+<img src="https://cdn-images-1.medium.com/max/1074/1*s2tQ8VqIjleRsLKzaMj_LA.png" />
+
+## Recap
+
+Not only can Webpack combine all your JavaScript files, it makes managing dependencies heaps easier by building a *dependency graph* which is a explicit link to all the dependencies each JS file needs. Notice the arrows on the left hand side of the image below? That's what I'm talking about.
+
+<img src="https://webpack.github.io/assets/what-is-webpack.png" />
+
+These explicit dependencies are important. It allows us to **optimize** our code with code splitting, tree shaking, and more. I'll explain what those things are in a sec.
+
+#Webpack Setup
+
+Getting started with webpack is pretty simple. Just run
+
+```shell
+C:\PathToCurrentProject>yarn add webpack
+```
+
+This will give you access to the command line option "webpack". Now simply write
+
+```shell
+C:\PathToCurrentProject>webpack
+```
+
+You might see an output similar to this:
+
+<img src="http://developer.telerik.com/wp-content/uploads/2015/05/webpack-output.png" />
+
+Awesome! You've just built your app using webpack :D
+
+Granted, this doesn't *really* do anything **yet**, because we have to tell webpack what we want it to do!
+
+# Do what I say, Webpack!
+
+So how do we tell webpack to do what we want? Well there are two ways. We can pass in the options right on the command line like this:
+
+```shell
+C:\PathToCurrentProject>webpack --entry index.js --output bundle.js
+```
+
+Here, we've told webpack to use the index.js file in our hypothetical project, do stuff to it, and then output the result to a new file called bundle.js.
+
+What's the "stuff" we're doing to it? Good question! In this case we aren't actually doing anything, since we didn't pass in any options/loaders/plugins etc. But we'll get to that in a sec, I just wanted to show you how you can pass in options from the command line.
+
+What's that? You wanna know what other options there are? Ugh, fine. Here's how you can get a list of all your options:
+
+```shell
+C:\PathToCurrentProject>webpack -h
+```
+
+# Make Webpack Do Stuff
+
+So remember when I told you there are two ways to tell webpack to do what we want, and then I only told you one way? (passing options via the command line). There's the other way:
+
+In the root of your project, you can create a new file named `webpack.config.js`. This is going to be where we spend the rest of our time for this blog.
+
+The `webpack.config.js` file is our...wait for it...configuration file for webpack! I full sized webpack config file can look a bit scary when you see it for the first time.
+
+But never fear! At the end of the day it's just a JavaScript file. It just returns a regular JavaScript object that webpack then gobbles up.
+
+I'll show you a fairly basic, but complete config file that I've used for one of my reach apps, and then we'll start to break down each part individually. 
+
+If you get scared easily, close your eyes now. (just a joke people, don't actually do that)
+
+```javascript
+const path = require('path')
+
+module.exports = {
+  context: __dirname,
+  entry: './src/Index.js',
+  devtool: 'eval',
+  output: {
+    path: path.join(__dirname, '/public'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    publicPath: '/public/',
+    historyApiFallback: true
+  },
+  resolve: {
+    extensions: ['.js', '.json']
+  },
+  module: {
+    rules: [
+      {
+        include: path.resolve(__dirname, 'src'),
+        test: /\.js$/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+# Dissecting this beast
+
+Firstly, just take a look at the overall structure. It's just an object, with normal key value pairs, and a couple of arrays. The values are just regular booleans, strings, and regular expressions. There's no magic here.
+
+Let's take a look at some of the object variables. I'm just going to briefly explain them here, but you can find more information on the [official docs](https://webpack.js.org/configuration/).
+
+This example by no means includes all the options, but it has the basic/common ones and will get you up and running.
+
+Ready? Let's do this!
+
+[TODO: Finish this post]
+
+### Context
+### Entry
+### devtool
+### output
+### devServer
+### resolve
+### module / loaders
+
+
