@@ -4,7 +4,7 @@ title:  "Voting App"
 modified:
 categories: project
 excerpt:
-tags: [JavaScript,React,Authentication,React-Router,NodeJS,Express]
+tags: [JavaScript,React,OAuth 2.0,React-Router,NodeJS,Express,Mongo]
 image: 
   feature: voting-app.jpg
   thumb: voting-app.jpg
