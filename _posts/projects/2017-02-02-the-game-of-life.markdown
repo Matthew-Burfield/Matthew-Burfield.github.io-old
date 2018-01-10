@@ -10,6 +10,7 @@ image:
   thumb: the-game-of-life.jpg
 date:   2017-02-02 20:02:16
 codepen: https://codepen.io/Burfield/pen/QdmmJe
+demo: https://codepen.io/Burfield/full/QdmmJe
 gitrepo: https://github.com/Matthew-Burfield/TheGameOfLife
 ---
 

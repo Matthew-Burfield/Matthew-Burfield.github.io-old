@@ -10,6 +10,6 @@ image:
   thumb: quote-generator.jpg
 date:   2016-11-06 20:02:16
 codepen: https://codepen.io/Burfield/pen/QGwgQM
-gitrepo: 
+demo: https://codepen.io/Burfield/full/QGwgQM
+gitrepo:
 ---
-

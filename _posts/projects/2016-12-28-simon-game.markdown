@@ -10,6 +10,6 @@ image:
   thumb: simon-game.jpg
 date:   2016-12-28 20:02:16
 codepen: https://codepen.io/Burfield/pen/woLYVZ
+demo: https://codepen.io/Burfield/full/woLYVZ
 gitrepo: https://github.com/Matthew-Burfield/simon-game
 ---
-

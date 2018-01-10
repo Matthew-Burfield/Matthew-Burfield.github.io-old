@@ -10,6 +10,6 @@ image:
   thumb: twitch-tv.jpg
 date:   2016-11-16 20:02:16
 codepen: https://codepen.io/Burfield/pen/xRENLy
-gitrepo: 
+demo: https://codepen.io/Burfield/full/xRENLy
+gitrepo:
 ---
-

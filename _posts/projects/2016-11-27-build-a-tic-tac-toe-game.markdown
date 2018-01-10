@@ -10,6 +10,6 @@ image:
   thumb: tic-tac-toe.jpg
 date:   2016-11-27 20:02:16
 codepen: https://codepen.io/Burfield/pen/VmpLZy
+demo: https://codepen.io/Burfield/full/VmpLZy
 gitrepo: https://github.com/Matthew-Burfield/TicTacToe
 ---
-

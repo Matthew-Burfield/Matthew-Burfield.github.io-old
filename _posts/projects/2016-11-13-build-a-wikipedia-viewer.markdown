@@ -10,6 +10,6 @@ image:
   thumb: wikipedia-viewer.jpg
 date:   2016-11-13 20:02:16
 codepen: https://codepen.io/Burfield/pen/rWepJJ
-gitrepo: 
+demo: https://codepen.io/Burfield/full/rWepJJ
+gitrepo:
 ---
-

@@ -10,6 +10,6 @@ image:
   thumb: pomodoro-clock.jpg
 date:   2016-11-20 20:02:16
 codepen: https://codepen.io/Burfield/pen/LbxgKM
+demo: https://codepen.io/Burfield/full/LbxgKM
 gitrepo: https://github.com/Matthew-Burfield/PomodoroClock
 ---
-

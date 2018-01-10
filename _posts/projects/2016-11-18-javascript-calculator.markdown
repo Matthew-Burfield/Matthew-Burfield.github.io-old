@@ -10,6 +10,6 @@ image:
   thumb: javascript-calculator.jpg
 date:   2016-11-18 20:02:16
 codepen: https://codepen.io/Burfield/pen/wooGMa
-gitrepo: 
+demo: https://codepen.io/Burfield/full/wooGMa
+gitrepo:
 ---
-
