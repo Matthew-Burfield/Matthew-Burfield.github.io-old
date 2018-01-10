@@ -19,6 +19,11 @@
         <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
       </header>
       <div class="social-links">
+        {% if page.demo %}
+          <div>
+            <a href="{{ page.demo }}" title="Launch Project" target="_blank"><i class="fa fa-rocket fa-3x" aria-hidden="true"></i><p>Launch Project</p></a>
+          </div>
+        {% endif %}
         {% if page.gitrepo %}
           <div>
             <a href="{{ page.gitrepo }}" title="View On GitHub" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i><p>View on GitHub</p></a>
